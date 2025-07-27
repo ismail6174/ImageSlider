@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br>
+    <h1>Umera Ahmed 🖋</h1>
+    <br>
+    
+    <div class="gallery-wrap">
+        <h2 id="start">◀</h2>
+        <div class="gallery">
+        
+ <div>
+ <span> <img src="image9.jpg"> </span>
+ <span> <img src="image4.jpg"> </span>
+ <span> <img src="image3.jpg"> </span>
+ </div>
+ 
+ <div>
+ <span> <img src="image5.jpg"> </span>
+ <span> <img src="image6.jpg"> </span>
+ <span> <img src="image7.jpg"> </span>
+ </div>
+ 
+ <div>
+ <span> <img src="image8.jpg"> </span>
+ <span> <img src="image1.jpg"> </span>
+ <span> <img src="image10.jpg"> </span>
+ </div>
+ 
+ <div>   
+ <span> <img src="image11.jpg"> </span>
+ <span> <img src="image12.jpg"> </span>
+ <span> <img src="image14.jpg"> </span>
+ </div>
+ 
+  <div>   
+ <span> <img src="image15.jpg"> </span>
+ <span> <img src="image16.jpg"> </span>
+ <span> <img src="image17.jpg"> </span>
+ </div>
+ 
+  <div>   
+ <span> <img src="image18.jpg"> </span>
+ <span> <img src="image19.jpg"> </span>
+ <span> <img src="image20.jpg"> </span>
+ </div>
+ 
+  <div>   
+ <span> <img src="image21.jpg"> </span>
+ <span> <img src="image22.jpg"> </span>
+ <span> <img src="image23.jpg"> </span>
+ </div>
+ 
+  <div>   
+ <span> <img src="image24.jpg"> </span>
+ <span> <img src="image25.jpg"> </span>
+ <span> <img src="image26.jpg"> </span>
+ </div>
+ 
+  <div>   
+ <span> <img src="image27.jpg"> </span>
+ <span> <img src="image28.jpg"> </span>
+ <span> <img src="image29.jpg"> </span>
+ </div>
+    
+    </div>
+         <h2 id="back">▶</h2>
+    </div>
+    <p class="scroll-hint" id="scrollHint"> (Scroll images to view more👇🏻)</p>
+   
+          <br><br><br>
+         
+         <footer style="position: relative; top: 80px; width: 100%; text-align: center; font-size: 14px; color: white;">
+    © 2025 Ismail Shah | Built with ❤️ by 
+    <a href="https://github.com/ismail6174" target="_blank" style="color: #fff; text-decoration: underline;">ismail6174</a>
+  </footer>
+    
+    <script>
+        
+  let scrollContainer = document.querySelector(".gallery");
+  let backBtn = document.getElementById("start");
+  let nextBtn = document.getElementById("back");
+  
+ scrollContainer.addEventListener("wheel",(evt)=>{
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+      scrollContainer.style.scrollBehavior = "auto";
+  })
+  
+  nextBtn.addEventListener("click",()=>{
+  scrollContainer.style.scrollBehavior = "smooth";
+   scrollContainer.scrollLeft += 900;
+  })
+  
+  
+  backBtn.addEventListener("click",()=>{
+  scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft -= 900;
+  })
+ 
+
+  window.addEventListener("load", function () {
+    const hint = document.getElementById("scrollHint");
+    setTimeout(() => {
+      hint.style.opacity = "0"; // Start fade-out
+      setTimeout(() => {
+        hint.style.display = "none"; // Fully hide after fade-out
+      }, 1000); // 1s = match transition duration
+    }, 4500); // After blinking (3 x 1.5s)
+  });
+ 
+ 
+    </script>
+</body>
+</html>
